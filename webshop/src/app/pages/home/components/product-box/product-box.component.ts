@@ -1,4 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  description: string;
+  image: string;
+};
+
 
 @Component({
   selector: 'app-product-box',
@@ -7,5 +17,17 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductBoxComponent {
   @Input() fullWidthMode = false;
+  product: Product | undefined = {
+    id: 1,
+    title: "snickers",
+    price: 150,
+    category: "shoes",
+    description: "Description",
+    image: "https://via.placeholder.com/150"
+  };
+  @Output() addToCart = new EventEmitter();
   
+  onAddCart():void {
+    this.addToCart.emit(this.product);
+  };
 }

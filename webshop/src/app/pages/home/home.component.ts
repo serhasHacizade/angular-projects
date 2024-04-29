@@ -21,4 +21,8 @@ export class HomeComponent {
     this.category = newCategory;
     this.rowHeight = ROWS_HEIGHT[this.cols];
   };
+
+  // onAddToCart(): void {
+
+  // };
 };
