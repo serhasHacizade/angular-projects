@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-interface Product {
+export interface Product {
   id: number;
   title: string;
   price: number;

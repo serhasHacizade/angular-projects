@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { provideHttpClient, withFetch } from "@angular/common/http";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -55,6 +57,7 @@ import { CartService } from './services/cart.service';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
+    provideHttpClient(withFetch()),
     CartService
   ],
   bootstrap: [AppComponent]
