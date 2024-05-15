@@ -4,7 +4,7 @@
             <mat-icon>menu</mat-icon>
         </button>
         <span> APP LOGO </span>
-        <div fcFlex fcLayout="row" fxLayoutAlign="flex-end">
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
                 <li>
                     <button mat-icon-button>
@@ -17,7 +17,15 @@
                     </button>
                 </li>
                 <li>
-                    Menu
+                    <button style="margin-top: 5px;" mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>person_outline</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                        </button>
+                    </mat-menu>
                 </li>
             </ul>
         </div>
