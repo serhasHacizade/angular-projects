@@ -19,7 +19,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient(withFetch())],
+    provideHttpClient(withFetch()),
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

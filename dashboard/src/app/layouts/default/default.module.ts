@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { DefaultComponent } from './default.component';
 import { DashboardComponent } from '../../modules/dashboard/dashboard.component';
-import { RouterModule } from '@angular/router';
 import { PostsComponent } from '../../modules/posts/posts.component';
 import { SharedModule } from '../../shared/shared.module';
 
-import {MatSidenavModule} from "@angular/material/sidenav"
 import { MatDividerModule } from '@angular/material/divider';
+import {MatSidenavModule} from "@angular/material/sidenav"
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +26,10 @@ import { MatDividerModule } from '@angular/material/divider';
     RouterModule,
     SharedModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class DefaultModule { }

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './default.component.scss'
 })
 export class DefaultComponent {
+  sideBarOpen = false;
 
+  sideBarToggle(event: any) {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
+  
 }
